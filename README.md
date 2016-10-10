@@ -6,8 +6,7 @@ Scale your cluster up, by just booting more machines on the USB.
 
 * Built on Debian Jessie.
 * Tinc VPN connects your machines together.
-* When you are connected to the VPN, Puppet agent will start to do further
-configuration.
+* Puppet agent will connect to a Puppet server (on the VPN) for further config.
 
 ## Getting started
 
@@ -16,6 +15,11 @@ configuration.
 3. Mount the USB stick and find the `config.json` file in the `risnix` directory.
 4. Edit the `config.json` file. (More info below.)
 5. Now, boot a machine on the USB device.
+
+## Build the USB image.
+
+The build was made for running within docker, so you need docker.
+The `run.sh` script will do most magic and generate a `usb.img` image file.
 
 ## Prerequisites
 
@@ -26,12 +30,7 @@ You need at least one server with:
 invitations to the tinc vpn.
 * Some DHCP Server for providing IPs to machines that connects to your VPN.
 
-And, on the VPN you will also need at least one Puppet server.
-
-## A couple of principle that are good to understand
-
-* To expand your cluster, just boot up more machines!
-* You can use identical copies of the USB stick to boot multiple machines.
+On the VPN, you will also need at least one Puppet server.
 
 ## Configuration (the `config.json` file)
 
