@@ -8,19 +8,6 @@ Scale your cluster up, by just booting more machines on the USB.
 * Tinc VPN connects your machines together.
 * Puppet agent will connect to a Puppet server (on the VPN) for further config.
 
-## Getting started
-
-1. Download the USB image.
-2. Copy the image file onto an USB stick.
-3. Mount the USB stick and find the `config.json` file in the `risnix` directory.
-4. Edit the `config.json` file. (More info below.)
-5. Now, boot a machine on the USB device.
-
-## Build the USB image.
-
-The build was made for running within docker, so you need docker.
-The `run.sh` script will do most magic and generate a `usb.img` image file.
-
 ## Prerequisites
 
 You need at least one server with:
@@ -31,6 +18,19 @@ invitations to the tinc vpn.
 * Some DHCP Server for providing IPs to machines that connects to your VPN.
 
 On the VPN, you will also need at least one Puppet server.
+
+## Getting started
+
+1. Download the USB image.
+2. Copy the image file onto an USB stick.
+3. Mount the USB stick and find the `config.json` file in the `risnix` directory.
+4. Edit the `config.json` file. (More info below.)
+5. Now, boot a machine on the USB device.
+
+## How to build the USB image.
+
+The build was made for running within docker, so you need docker.
+The `run.sh` script will do most magic and generate a `usb.img` image file.
 
 ## Configuration (the `config.json` file)
 
